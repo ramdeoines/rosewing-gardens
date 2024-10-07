@@ -10,24 +10,27 @@ header {
     background-color: #ff6f61;
     color: white;
     padding: 20px;
-    text-align: center;
     box-sizing: border-box; /* Include padding in width calculations */
     width: 100%; /* Ensure header takes full width */
     display: flex; /* Use flexbox for alignment */
     align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
+    justify-content: space-between; /* Space between logo/title and nav */
 }
 
 .logo {
     width: 50px; /* Set a width for the logo */
     height: auto; /* Maintain aspect ratio */
-    margin-right: 15px; /* Space between logo and title */
+    margin-right: 20px; /* Space between logo and title */
 }
 
 h1 {
     font-size: 3em; /* Increase font size for the header */
     margin: 0; /* Remove default margin */
     line-height: 1; /* Adjust line height for better stacking */
+    display: flex; /* Use flexbox for title alignment */
+    flex-direction: column; /* Stack the words on top of each other */
+    align-items: center; /* Center the title */
+    justify-content: center; /* Center vertically */
 }
 
 .header-title {
@@ -35,14 +38,19 @@ h1 {
     font-family: 'Pacifico', cursive; /* Use a curved font */
 }
 
+nav {
+    margin-left: auto; /* Push the navigation to the right */
+}
+
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0; /* Remove default margin */
 }
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
+    margin: 0 15px; /* Space between navigation items */
 }
 
 nav ul li a {
@@ -64,10 +72,11 @@ main {
 .flower-item {
     overflow: hidden; /* Ensures the image doesn't overflow */
     border-radius: 10px; /* Rounded corners */
-    transition: transform 0.3s; /* Smooth transition for hover effect */
+    transition: transform 0.3s, z-index 0.3s; /* Smooth transition for hover effect */
     position: relative; /* Positioning for square aspect ratio */
     width: 100%; /* Ensure full width */
     padding-top: 100%; /* Maintain square aspect ratio */
+    z-index: 1; /* Default z-index */
 }
 
 .flower-item img {
@@ -101,6 +110,7 @@ main {
 
 .flower-item:hover {
     transform: scale(1.1); /* Slightly enlarge on hover */
+    z-index: 10; /* Bring hovered item to the front */
 }
 
 footer {
