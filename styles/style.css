@@ -113,6 +113,11 @@ main {
     z-index: 10; /* Bring hovered item to the front */
 }
 
+.flower-item:hover img {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
 footer {
     text-align: center;
     padding: 10px;
@@ -139,4 +144,39 @@ footer {
         display: block; /* Stack navigation items vertically */
         margin: 10px 0; /* Add margin for spacing */
     }
+}
+
+.email-link {
+    color: blue; /* Blue text color */
+    text-decoration: underline; /* Underline the text */
+    cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+}
+
+.hero {
+    background-image: url('images/hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.testimonials {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+input, textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
