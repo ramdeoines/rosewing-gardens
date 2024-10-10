@@ -98,14 +98,26 @@ main {
     background-color: rgba(128, 128, 128, 0.5); /* Transparent gray background */
     color: white; /* White text */
     display: flex; /* Use flexbox for centering */
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
+    flex-direction: column; /* Stack text vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
     opacity: 0; /* Initially hidden */
     transition: opacity 0.3s; /* Smooth transition for opacity */
+    padding: 10px; /* Add padding for better spacing */
 }
 
 .flower-item:hover .overlay {
     opacity: 1; /* Show overlay on hover */
+}
+
+.overlay strong {
+    font-size: 1.2em; /* Adjust font size for bold text */
+    margin-bottom: 5px; /* Space between title and paragraph */
+}
+
+.overlay p {
+    font-size: 0.9em; /* Adjust font size for paragraph */
+    text-align: center; /* Center the paragraph text */
 }
 
 .flower-item:hover {
@@ -153,7 +165,7 @@ footer {
 }
 
 .hero {
-    background-image: url('images/hero-image.jpg');
+    background-image: url('images/hero-section-image.jpg');
     background-size: cover;
     background-position: center;
     color: white;
@@ -162,9 +174,26 @@ footer {
 }
 
 .testimonials {
-    background-color: #f0f0f0;
+    background-color: #f0f0f0; /* Light background for contrast */
     padding: 20px;
-    text-align: center;
+    text-align: left; /* Align text to the left */
+}
+
+.testimonial {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 20px; /* Space between testimonials */
+}
+
+.testimonial-image {
+    width: 60px; /* Set a fixed width for the image */
+    height: 60px; /* Set a fixed height for the image */
+    border-radius: 50%; /* Make the image circular */
+    margin-right: 15px; /* Space between image and text */
+}
+
+.testimonial-text {
+    flex: 1; /* Allow text to take the remaining space */
 }
 
 form {
